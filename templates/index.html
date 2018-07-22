@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+        <script src="{{ url_for('static', filename='index.js') }}"></script>
+        <title>Chatterbox</title>
+    </head>
+    <body>
+        <div class="jumbotron">
+            <h1>Welcome, <span id="username_display"></span>!</h1>
+        </div>
+
+        <!--form for changing username -->
+        <form id="form_username">
+            <input id="username" autocomplete="off" autofocus placeholder="Enter your username here" type="text">
+            <input type="submit" value="change name">
+        </form>
+
+        <!--form for creating a new chatting channel -->
+        <form id="create_channel">
+            <input id="new_channel" autocomplete="off" autofocus placeholder="create a new chatting channel" type="text">
+            <input type="submit" value="create channel">
+        </form>
+
+        <!--form for selecting a chatting channel -->
+        <form id="channel_select">
+            <select id="choose_channels">
+            </select>
+        </form>
+    </body>
+</html>
+
