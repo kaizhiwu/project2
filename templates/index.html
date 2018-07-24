@@ -26,7 +26,20 @@
         <!--form for selecting a chatting channel -->
         <form id="channel_select">
             <select id="choose_channels">
+                {% for channel in channel_list %}
+                    <option value="{{channel}}">{{channel}}</option>
+                {% endfor %}
             </select>
+        </form>
+
+        <!--div display all the message in the channel -->
+        <ul id="channel_message">
+        </ul>
+
+        <!--form for submitting new message -->
+        <form id="submit_message">
+            <input id="new_message" autocomplete="off" autofocus placeholder="type here" type="text">
+            <input type="submit" value="new message">
         </form>
     </body>
 </html>
